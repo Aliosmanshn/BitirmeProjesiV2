@@ -1,0 +1,70 @@
+﻿@model BitirmeProjesiV2.Models.DB.User
+
+@{
+    ViewData["Title"] = "Kayit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+} 
+
+<div class="body">
+    <div class="veen">
+        <div class="login-btn splits">
+            <p>Zaten Kayıtlı Kullanıcı mısınız?</p>
+            <button class="active">Giriş Yap</button>
+        </div>
+        <div class="rgstr-btn splits">
+            <p>Hesabınız yok mu?</p>
+            <button>Kayıt Ol</button>
+        </div>
+        <div class="wrapper">
+            <form id="login" tabindex="500">
+                <h3>Giriş Yap</h3>
+                <div class="mail">
+                    <input type="email" name="">
+                    <label>Mail veya Kullanıcı Adı</label>
+                </div>
+                <div class="passwd">
+                    <input type="password" name="">
+                    <label>Şifreniz</label>
+                </div>
+                <div class="submit">
+                    <button class="dark">Giriş Yap</button>
+                </div>
+            </form>
+
+           
+            <form asp-controller="Kayit" asp-action="Create" id="register" tabindex="502">
+                <h3>Kayıt Ol</h3>
+                <div class="name">
+                    <label asp-for="Namesurname" class="control-label"></label>
+                    <input asp-for="Namesurname" class="form-control" />
+                    <span asp-validation-for="Namesurname" class="text-danger"></span>                 
+                    <label>Adınız Soyadınız</label>
+                </div>
+                <div class="mail">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                    <label>Mail</label>
+                </div>
+                <div class="uid">
+                    <label asp-for="Username" class="control-label"></label>
+                    <input asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="text-danger"></span>       
+                    <label>Kullanıcı adı</label>
+                </div>
+                <div class="passwd">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control"/>
+                    <span asp-validation-for="Password" class="text-danger"></span>   
+                    <label>Şifre</label>
+                </div>
+                <div class="submit">
+                    <button class="dark">Kayıt Ol</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

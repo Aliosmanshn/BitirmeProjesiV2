@@ -1,0 +1,66 @@
+﻿@model IEnumerable<BitirmeProjesiV2.Models.DB.Comment>
+ 
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CommentNameSurname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommentMail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommentApproval)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommentContents)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trip)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentNameSurname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentMail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentApproval)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentContents)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Trip.TripId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Yorumid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Yorumid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Yorumid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

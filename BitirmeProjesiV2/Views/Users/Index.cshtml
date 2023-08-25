@@ -1,0 +1,89 @@
+﻿@model IEnumerable<BitirmeProjesiV2.Models.DB.User>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>TÜM KULLANICILAR</h1>
+
+
+<p>
+       <a class="btn btn-success" href="/Users/Create">Kullanıcı Oluştur </a>
+
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Namesurname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Birthdate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Createddate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telnr1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telnr2)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => user.Username)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => user.Password)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => user.Namesurname)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => user.Email)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => user.Gender)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => user.Birthdate)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => user.Createddate)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => user.Telnr1)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => user.Telnr2)
+            </td>
+            <td>
+
+                    <a class="btn btn-warning" href="/Users/Edit/@user.UserId">Güncelle </a>
+                    <a class="btn btn-danger" href="/Users/Delete/@user.UserId">Sil </a>
+                    <a class="btn btn-info" href="/Users/Details/@user.UserId">Detay Göster </a>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

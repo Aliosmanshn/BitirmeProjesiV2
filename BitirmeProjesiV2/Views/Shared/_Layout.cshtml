@@ -1,0 +1,119 @@
+﻿
+<head>
+
+    <meta charset="utf-8">
+    <meta name="Description" http-equiv="Content-Type" content="Çorum Gezi" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="~/resimler/favicon.ico" />
+    <link rel="icon" href="~/resimler/favicon.ico" />
+
+    <title>Çorum Gezi</title>
+
+    <link rel="stylesheet" href="~/css/bootstrap-4.4.1.css" asp-append-version="true"   />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true"   />
+    <link rel="stylesheet" href="~/css/multiColumnTemplate.css" asp-append-version="true"   />
+    <link rel="stylesheet" href="~/css/turSatinAl.css" asp-append-version="true"   />
+    <link rel="stylesheet" href="~/css/simpleGridTemplate.css" asp-append-version="true"   />
+
+    <!-- Scriptler Başlangıç -->
+    <script src="~/js/jquery-3.4.1.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap-4.4.1.js"></script>
+    <script src="~/https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="~/https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".veen .rgstr-btn button").click(function () {
+                $('.veen .wrapper').addClass('move');
+                $('.body').css('background', '#e0b722');
+                $(".veen .login-btn button").removeClass('active');
+                $(this).addClass('active');
+
+            });
+            $(".veen .login-btn button").click(function () {
+                $('.veen .wrapper').removeClass('move');
+                $('.body').css('background', '#ff4931');
+                $(".veen .rgstr-btn button").removeClass('active');
+                $(this).addClass('active');
+            });
+        });</script>
+
+    <!-- Scriptler Bitiş -->
+
+</head>
+<body>
+    <!-- Nav Başlangıç -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand"> Çorum Gezi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"> </span> </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item @Html.ActiveClass("Home", "Index")"> <a class="nav-link " href="~/Home/Index">Anasayfa</a> </li>
+                <li class="nav-item @Html.ActiveClass("Resim", "Resim")"> <a class="nav-link" href="~/Resim/Resim"> Resimler<span class="sr-only">(current)</span></a> </li>
+                <li class="nav-item @Html.ActiveClass("Yemekler", "Yemekler")"> <a class="nav-link" href="~/Yemekler/Yemekler">Yemekler</a> </li>
+                <li class="nav-item @Html.ActiveClass("Oteller", "Oteller")" > <a class="nav-link" href="~/Oteller/Oteller">Oteller</a> </li>
+                <li class="nav-item @Html.ActiveClass("Hakkimda", "Hakkimda")"> <a class="nav-link" href="~/Hakkimda/Hakkimda">Hakkımda</a> </li>
+                <li class="nav-item @Html.ActiveClass("Kayit", "Kayit")" > <a class="nav-link" href="~/Kayit/Kayit">Kayıt Formu</a> </li>
+                <li class="nav-item @Html.ActiveClass("TurSatinAl", "TurSatinAl")" > <a class="nav-link" href="~/TurSatinAl/TurSatinAl">Tur Satın Al</a> </li>
+
+
+
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Müzeler </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <a class="dropdown-item " href="~/CorumMuzesi/CorumMuzesi">Çorum Müzesi</a> <a class="dropdown-item " href="~/Alaca/Alaca">Alacahöyük Müzesi </a> <a class="dropdown-item " href="~/BogazKale/BogazKale">Boğazköy Müzesi </a>
+                    </div>
+                </li>
+                <li class="nav-item"> <a class="nav-link disabled" href="#"> Çorum Gezi</a> </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Ara" aria-label="Ara">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ara</button>
+            </form>
+        </div>
+    </nav>
+    <!-- Nav Bitiş -->
+
+    <div class=" body-content">
+        @RenderBody()
+        <hr />
+        @if (IsSectionDefined("scripts"))
+        {
+            RenderSection("scripts");
+        }
+
+
+    </div>
+
+
+</body>
+<footer class="footer2" >
+    <div class="container2">
+        <div class="footer-content2">
+            <div class="footer-logo2">
+                <img style="width:  60px; border-radius: 50%" src="~/resimler/ÇORUM GEZİ.png" alt="">
+            </div>
+            <div class="footer-links2">
+                <ul class="footer-menu2">
+                    <li><a href ="~/Home/Index">Anasayfa</a></li>
+                    <li><a href="~/Hakkimda/Hakkimda">Hakkımda</a></li>
+                    <li><a href="#">Yardım</a></li>
+                    <li><a href="#">iletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-social2">
+                <ul class="social-icons2">
+                    <li><a href="#"><i class="fab fa-facebook-f2"><img src="~/resimler/sosyal medya ıcon/4lü/fb-icon.png" alt="Face"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter2"><img src="~/resimler/sosyal medya ıcon/4lü/instagram-icon.png" alt="instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram2"><img src="~/resimler/sosyal medya ıcon/4lü/linkedin-icon.png" alt="linkedin"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in2"><img src="~/resimler/sosyal medya ıcon/4lü/twitter-icon.png" alt="twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom2">
+            <p style="font-size: 10px">&copy; corumgezi © 2023 Tüm Hakları Saklıdır.</p>
+        </div>
+    </div>
+</footer>

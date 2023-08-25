@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewData["Title"] = "BogazKale";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!doctype html>
+<html>
+<head>
+
+    <!-- Bootstrap Static Header -->
+    <div style="height: 1000px; background-image:url(/resimler/müzeler/bogazköy/1.jpg); background-position: center" class="jumbotron bg-cover text-white">
+        <div style="margin-top: 15%;background-color: transparent " class="container py-5 text-center">
+            <h1 style="color: white; " class="display-4 font-weight-bold">Boğazköy Müzesi</h1>
+        </div>
+    </div>
+
+
+
+</head>
+
+<body>
+
+
+    <div class="container py-5">
+        <h2 class="h3 font-weight-bold">&nbsp; Alacahöyük </h2>
+        <div class="row">
+            <div class="col-lg-10 mb-4">
+                <p class="font-italic text-muted">
+                    Boğazköy Müzesi, Çorum Müzesine bağlı bir birim olarak hizmet vermektedir.  Çorum’un 82 km. güneybatısındaki Boğazkale ilçe merkezinde yer almaktadır. 12 Eylül 1966 yılında açılan müze, 2011 yılında yeniden düzenlenmiştir. Müzede, Boğazköy-Hattuşa kazılarında açığa çıkartılan eserler sergilenmektedir.
+                </p>
+                <p class="font-italic text-muted">
+                    Boğazkale Müzesinin teşhir salonlarında tematik ve kronolojik sergileme yapılmıştır. Zemin kat birinci salonda Kalkolitik, Erken Tunç Çağı ve Asur Ticaret Kolonileri Çağı eserleri ile başlayan sergileme kronolojik olarak Demir Çağı (Frig), Galat, Roma ve Doğu Roma dönemi ile son bulmaktadır.
+                </p>
+            </div>
+            <div class="col-lg-10">
+                <p class="font-italic text-muted">
+                    Bakanlığımızın girişimleri sonucunda Berlin Müzesi’nden iadesi sağlanan Boğazköy Sfenksi, İstanbul Arkeoloji Müzeleri Müdürlüğü’nde bulunan diğer Sfenksi ile birlikte 26 Kasım 2011 tarihinden itibaren Boğazköy Müzesinde Hitit salonu girişinde sergilenmektedir.
+                </p>
+                <p class="font-italic text-muted">
+                    Sfenkslerin bulunduğu kapı ile geçilen Hitit salonunda, Hititlerin devlet ve toplumsal yapısı zengin görsellere sahip pano ve eserlerle anlatılmaktadır. Hitit taş ustası ile kazılarda ele geçen mühür baskılı bullalar tematik olarak sergilenmektedir. Hitit salonu üst katında Hititlerin dini ve askeri yapısı, yazı sistemi, konularına göre ayrılmış vitrinlerdeki eserler, panolardaki bilgiler ve görsellerle anlatılmaktadır. Burada Hattuşa örenyeri ve Büyük Mabedin maketi de yer almaktadır.  Müze bahçesinde ise Hitit dönemine ait sfenks, hiyeroglif yazıtlı kitabeler ile Roma ve Doğu Roma dönemlerine ait mil taşları ve mezar taşları sergilenmektedir.
+                </p>
+                <p class="font-italic text-muted">
+                    Müzede, Türkçe, İngilizce ve Almanca olmak üzere üç dilde sesli rehberlik sistemi ücretsiz olarak ziyaretçiler tarafından kullanılabilmektedir.
+
+                </p>
+                <div style="width: 100%; " id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block mx-auto" src="/resimler/müzeler/bogazköy/3.webp" alt="First slide">
+                            <div class="carousel-caption">
+                                <h5>Alaca Höyük</h5>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block mx-auto" src="/resimler/müzeler/bogazköy/2.jpg" alt="Second slide">
+                            <div class="carousel-caption">
+                                <h5>Şakacı Şirin</h5>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block mx-auto" src="/resimler/müzeler/bogazköy//4.jpg" alt="Third slide">
+                            <div class="carousel-caption">
+                                <h5>Kybele Heykel</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+                </div>
+
+                <div class="ortala">
+                    <h2 class="h3 font-weight-bold">&nbsp; Öne Çıkan Yorumlar</h2> <br>
+                    <div class="teayorum">
+                        <ul>
+                            <li>
+                                <div class="img"><img src="/resimler/çorum gezi.png"></div>
+                                <div class="yorum">
+                                    <span> Osman D***</span>
+                                    <p>Görülmeye değer bir müze.</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="forum">
+                        <form action="javascript:yorum()">
+
+                            <div class="input">
+                                <span>Adınız Soyadınız </span>
+                                <input type="text" name="adinizsoyadiniz">
+                            </div>
+
+                            <div class="input">
+                                <span>Yorumunuz</span>
+                                <textarea name="yorum"></textarea>
+                            </div>
+
+                            <div class="buton"><button type="submit">Yorum Gönder</button></div>
+
+                        </form>
+                    </div>
+                </div>
+                <!-- Harita  -->
+
+                <div class="container py-5">
+                    <h2 class="h3 font-weight-bold">&nbsp; Nasıl Giderim</h2>
+                    <div class="row">
+                        <div class="col-lg-10 mb-4">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3055.250974414268!2d34.60586511538408!3d40.02517567941242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40872abe91e97c31%3A0x534d3b9ed4c23c67!2zQm_En2F6a8O2eSBBcmtlb2xvamkgTcO8emVzaQ!5e0!3m2!1str!2str!4v1690281165641!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
